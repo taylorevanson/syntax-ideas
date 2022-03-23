@@ -1,5 +1,6 @@
-#Examples:
+# Examples
 ### Javascript
+```
 import fs from "fs"
 let file, path = './test.txt'
 
@@ -8,7 +9,7 @@ try fs.deleteFile(path)
 
 // don't throw an error if it doesn't find a file
 try file = fs.readFile(path)
-console.log(file) // null
+console.log(file) // undefined
 
 // no brackets on catch blocks with one statement in them
 try file = fs.readFile(path) catch(e) file = fs.readFile('./default.txt')
@@ -30,6 +31,7 @@ try file = fs.readFile(path) catch e => {
 }
 try file = fs.readFile(path) catch e => newrelic.sendError(e)
 try file = fs.readFile(path) catch e => errorHandler(e, path)
+```
 
 ### PHP
 // todo
