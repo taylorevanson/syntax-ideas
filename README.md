@@ -1,2 +1,2 @@
 # syntax-ideas
-Humble, crudely coded examples of possible syntax improvements to PHP and JavaScript
+Humble, crudely coded examples of possible improvements to PHP, JavaScript, HTML, and CSS
