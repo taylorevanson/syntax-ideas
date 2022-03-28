@@ -1,5 +1,3 @@
-# Examples
-### Javascript
 ```javascript
 import fs from "fs"
 let file, path = './test.txt'
@@ -12,7 +10,7 @@ try file = fs.readFile(path)
 console.log(file) // undefined
 
 // no brackets on catch blocks with one statement in them
-try file = fs.readFile(path) catch(e) file = fs.readFile('./default.txt')
+try file = fs.readFile(path) catch(e) => file = fs.readFile('./default.txt')
 console.log(file) // contents of ./default.txt
 
 // arrow function-ify catch blocks
@@ -31,30 +29,4 @@ try file = fs.readFile(path) catch e => {
 }
 try file = fs.readFile(path) catch newrelic.sendError
 try file = fs.readFile(path) catch e => errorHandler(e, path)
-```
-
-### PHP
-```php
-<?php
-$file = NULL;
-$path = './test.txt';
-
-try unlink($path);
-
-try $file = file_get_contents($path);
-if($file) {
-    //...
-}
-
-try $file = file_get_contents($path);
-try $file = file_get_contents($path); catch function(e) {
-    //...
-}
-
-$errorHandler = function(e) {
-    newrelic_send_error(e);
-    throw e;
-};
-try $file = file_get_contents($path); catch $errorHandler;
-try $file = file_get_contents($path); catch $file = file_get_contents('./default.txt');
 ```
