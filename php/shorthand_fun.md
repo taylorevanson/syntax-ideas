@@ -34,7 +34,6 @@ array_map($user => $logger->info($user->getMusic()), $users)
 Here's some other idea syntax that's a little more radical. Letting loose a little!
 ```php
 $func = ($op) use($operations) => {
-    
 }
 
 $bootId = foreach($mapped as $id => $user) {
@@ -42,8 +41,12 @@ $bootId = foreach($mapped as $id => $user) {
 }
 echo $bootId; // user id, 214 or something
 
-$test = foreach($mapped as $id => $user) {
+echo foreach($mapped as $id => $user) {
     if(2 < 1) break TRUE;
-}
-echo $test; // FALSE
+} // NULL
+
+(new Query())->select('*')->from('users')->map($user => $logger->info($user->getMusic()))
+
+$func = $user => $logger->info($user->getMusic())
+(new Query())->select('*')->from('users')->map($user => $func)
 ```
