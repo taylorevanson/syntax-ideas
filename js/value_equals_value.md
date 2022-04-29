@@ -20,5 +20,5 @@ str = .replace('test', 'pass')
 // a few suffixes that could shorten the str = str redundancy
 str.replace('test', 'pass').self
 str.replace('test', 'pass').this 
-str.replace('test', 'pass').let // my vote
+str::replace('test', 'pass') // my vote
 ```
