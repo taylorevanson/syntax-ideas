@@ -1,4 +1,4 @@
-I sometimes do some `str = str.replace(needle, '')` too often - setting a variable by using `str = str` or `count = count`. It could be cool to do some "by reference" stuff and some eliminating of this dumb thing IMO, similar to PHP but in JS maybe?
+I sometimes do some `str = str.replace('test', '')` too often - setting a variable by using `str = str` or `count = count`. It could be cool to do some "by reference" stuff and some eliminating of this dumb thing IMO, similar to PHP but in JS maybe?
 ```javascript
 
 let str = 'test'
