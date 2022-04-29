@@ -1,5 +1,5 @@
 I like the minimal syntax in Node. I like `new Query()` in parentheses when I can get away with it, I don't
-like writing the token `function`, starting to hate commas, stuff like that. I like the shorthand map of the user to the 
+like writing the token `function`, starting to hate semicolons, stuff like that. I like the shorthand map of the user to the 
 `mapped` variable. That's all I need: the data in a different structure (in a situation like this).
 ```javascript
 let mapped = {},
